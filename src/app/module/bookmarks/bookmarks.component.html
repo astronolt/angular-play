@@ -1,0 +1,10 @@
+<h1>useful links for Angular</h1>
+
+<a routerLink="/">Home</a>
+
+<ul>
+   <li *ngFor="let bookmark of bookmarkList">
+      <a href="{{ bookmark.url }}"> {{ bookmark.name }}</a>
+   </li>
+</ul>
+<button (click)="clearBookmarks()">Reset list of bookmarks</button>

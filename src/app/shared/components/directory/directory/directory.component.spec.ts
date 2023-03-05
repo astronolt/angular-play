@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ZooComponent } from './zoo.component';
+import { DirectoryComponent } from './directory.component';
 
-describe('ZooComponent', () => {
-  let component: ZooComponent;
-  let fixture: ComponentFixture<ZooComponent>;
+describe('DirectoryComponent', () => {
+  let component: DirectoryComponent;
+  let fixture: ComponentFixture<DirectoryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ZooComponent ]
+      declarations: [ DirectoryComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ZooComponent);
+    fixture = TestBed.createComponent(DirectoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

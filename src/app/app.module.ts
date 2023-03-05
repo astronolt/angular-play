@@ -2,17 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { BookmarksModule } from './module/bookmarks/bookmarks.module';
+
 import { AppComponent } from './app.component';
-import { ZooComponent } from './zoo/zoo.component';
+import { DirectoryComponent } from './shared/components/directory/directory/directory.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZooComponent
+    DirectoryComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BookmarksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

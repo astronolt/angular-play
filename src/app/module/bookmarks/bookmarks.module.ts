@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ZooComponent } from './zoo.component';
+import { BookmarksComponent } from './bookmarks.component';
 
 
 
 @NgModule({
   declarations: [
-    ZooComponent
+    BookmarksComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    BookmarksComponent
   ]
 })
-export class ZooModule { }
+
+export class BookmarksModule { }
