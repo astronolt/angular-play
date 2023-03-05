@@ -2,6 +2,10 @@
 
 <a routerLink="/">Home</a>
 
+<div fxLayout="row" fxLayoutAlign="center">
+   <p>menu 1</p>
+   <p>menu 2</p>
+</div>
 <ul>
    <li *ngFor="let bookmark of bookmarkList">
       <a href="{{ bookmark.url }}"> {{ bookmark.name }}</a>

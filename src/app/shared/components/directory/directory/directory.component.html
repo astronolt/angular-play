@@ -1,7 +1,6 @@
-<h1>useful links for Angular</h1>
+<h1>Directory - Angular</h1>
 
 <a routerLink="/bookmarks">See My bookmarks</a>
-
 <ul>
    <li *ngFor="let link of linkList">
       <a href="{{ link.url }}"> {{ link.name }}</a>
@@ -9,3 +8,12 @@
       <button (click)="addToBookmarks(link)"> Add to bookmarks </button>
    </li>
 </ul>
+
+
+<ul>
+   <li *ngFor="let comment of comments">
+      <div> {{ comment.id }} {{ comment.title }} </div>
+      <div>{{ comment.body }}</div>
+   </li>
+</ul>
+

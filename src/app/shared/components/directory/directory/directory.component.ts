@@ -3,6 +3,7 @@ import { LinkService } from '../../../../services/links/main.service';
 import { BookmarkService } from '../../../../services/bookmarks/main.service';
 
 import { Links } from '../../../../models/links';
+import { Comments } from '../../../../models/comments';
 
 
 @Component({
@@ -13,6 +14,10 @@ import { Links } from '../../../../models/links';
 export class DirectoryComponent {
   linkList: Links[] = [];
 
+  postList: [] = [];
+
+  comments: Comments[] = [];
+
   constructor(
     private linkService: LinkService,
     private bookmarkService: BookmarkService
@@ -20,6 +25,10 @@ export class DirectoryComponent {
 
   ngOnInit(): void {
     this.linkList = this.linkService.getLinks();
+    
+    this.linkService.getComments().subscribe( res => {
+      this.comments = res;
+    });
   }
 
   addToBookmarks(bookmark: Links): void {

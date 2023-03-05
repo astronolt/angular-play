@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BookmarksComponent } from './bookmarks.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 @NgModule({
@@ -9,7 +11,8 @@ import { BookmarksComponent } from './bookmarks.component';
     BookmarksComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FlexLayoutModule
   ],
   exports: [
     BookmarksComponent
