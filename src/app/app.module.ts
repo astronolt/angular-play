@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BookmarksModule } from './module/bookmarks/bookmarks.module';
+import { PostsModule } from './module/posts/posts.module';
 
 /*COMPONENTS*/
 import { AppComponent } from './app.component';
@@ -18,8 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     BookmarksModule,
-    HttpClientModule
+    PostsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 import { Links } from '../../models/links';
 import { Comments } from '../../models/comments';
+import { Posts } from '../../models/posts';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +19,12 @@ export class LinkService {
     return [];
   }
 
+  getPosts():Observable<Posts[]>{
+    return this.http.get<[]>('https://jsonplaceholder.typicode.com/posts/25');
+  }
+
   getComments():Observable<Comments[]>{
-    return this.http.get<[]>('https://jsonplaceholder.typicode.com/comments');
+    return this.http.get<[]>('https://jsonplaceholder.typicode.com/comments/25');
   }
 
   // getLinks(): Links[] {
