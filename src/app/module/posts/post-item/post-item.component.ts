@@ -6,18 +6,21 @@ import { Posts } from "../../../models/posts";
   templateUrl: './post-item.component.html',
   styleUrls: ['./post-item.component.css']
 })
-export class PostItemComponent {
+export class PostItemComponent{
 
   @Input() post: Posts;
   @Output() hidePost: EventEmitter<Posts> = new EventEmitter;
 
   constructor(){
     this.post = {
-      id: 0,
-      title: '',
-      body: '',
+      id: 1,
+      title: 'Title',
+      body: 'body',
       votes: 1,
     }
+  }
+
+  ngOnInit(): void {
   }
 
   upvote(post: Posts){
